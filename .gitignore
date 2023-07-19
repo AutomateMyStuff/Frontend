@@ -35,7 +35,17 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# .next
+.next
+.swc
+
 # .env
 .env
 .env.local
 .env.production
+.env.bak
+.env.local.bak
+.env.production.bak
+
+# visual studio code
+.vscode
