@@ -1,1 +1,1 @@
-web: npm run uat:nowait
+web: npm run uat
