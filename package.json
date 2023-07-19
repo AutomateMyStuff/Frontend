@@ -13,7 +13,7 @@
     "uat": "concurrently \"npm run build && npm run start\" \"npm run test:functional\" \"npx wait-on http://localhost:3000 && npm run test:e2e\"",
     "--------build-commands--------": "",
     "build": "cd e2e && npm i && cd .. && next build",
-    "heroku-postbuild": "npm uninstall react-icons && cd e2e && npm i && cd .. && next dev",
+    "heroku-postbuild": "npm uninstall react-icons && cd e2e && npm i && cd .. && next build",
     "--------test-commands--------": "",
     "test": "npm run lint && jest",
     "test:watch": "jest --watch",
