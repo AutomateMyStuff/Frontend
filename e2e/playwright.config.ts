@@ -25,7 +25,7 @@ export default defineConfig({
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [['html', {
-    open: 'never',
+    open: 'always',
     host: '0.0.0.0',
     port: 3005,
   }]],
