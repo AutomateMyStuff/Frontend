@@ -10,6 +10,7 @@
     "start": "next start",
     "dev": "next dev",
     "uat": "concurrently \"npm run start\" \"npm run test:functional\" \"npx wait-on http://localhost && npm run test:e2e\"",
+    "uat:nowait": "concurrently \"npm run start\" \"npm run test:functional\" \"npm run test:e2e\"",
     "--------build-commands--------": "",
     "build": "cd e2e && npm i && cd .. && next build",
     "heroku-postbuild": "cd e2e && npm i && cd .. && next build",
