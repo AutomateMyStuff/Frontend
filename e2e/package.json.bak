@@ -1,0 +1,15 @@
+{
+  "name": "playwrighttest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	  "test": "npx playwright test  && npx playwright show-report --port 3005"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.1"
+  }
+}
