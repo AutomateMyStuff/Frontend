@@ -24,7 +24,11 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [["html", { open: "never" }]],
+  reporter: [['html', {
+    open: 'never',
+    host: '0.0.0.0',
+    port: 3005,
+  }]],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
