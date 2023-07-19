@@ -1,7 +1,6 @@
 import { FC } from "react"
 import { useSession, signOut } from "next-auth/react"
 import Lottie from "lottie-react"
-import { BsFillCheckCircleFill } from "react-icons/bs"
 
 import confetti from "public/lotties/confetti.json"
 
@@ -13,7 +12,6 @@ export const SignedIn: FC = () => {
   return (
     <div className={styles.signedin_container}>
       <div className={styles.signedin_content}>
-        <BsFillCheckCircleFill />
         <h1>Signed In</h1>
         <p>
           You&apos;re signed in
