@@ -12,7 +12,7 @@
     "uattest": "concurrently \"npm run test:e2e\"",
     "uat": "concurrently \"npm run build && npm run start\" \"npm run test:functional\" \"npx wait-on http://localhost:3000 && npm run test:e2e\"",
     "--------build-commands--------": "",
-    "build": "next build",
+    "build": "cd e2e && npm i && cd .. && next build",
     "--------test-commands--------": "",
     "test": "npm run lint && jest",
     "test:watch": "jest --watch",
