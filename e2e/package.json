@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "report": "npx playwright show-report",
+    "report": "npx playwright show-report --port 3005 --host 0.0.0.0",
     "test-and-report": "npm run test && npm run report"
   },
   "keywords": [],
