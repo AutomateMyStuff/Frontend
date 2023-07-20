@@ -7,6 +7,8 @@ import { Card } from "src/components/Card"
 import { CardAnimation } from "src/components/CardAnimation"
 import { Page } from "src/components/Page"
 
+import { version } from '../package.json';
+
 const Home: FC<NextPage> = () => {
   return (
     <>
@@ -17,6 +19,9 @@ const Home: FC<NextPage> = () => {
         <Card>
           <CardAnimation />
         </Card>
+        <div style={{ position: "absolute", bottom: 20 }}>
+          <p>{version}-{process.env.NODE_ENV} ({process.env.APP_ENV})</p>
+        </div>
       </Page>
     </>
   )
