@@ -9,6 +9,11 @@ import { Page } from "src/components/Page"
 
 import { version } from '../package.json';
 
+const nodeEnv = process.env.NODE_ENV;
+const appEnv = process.env.NEXT_PUBLIC_APP_ENV;
+
+console.log('appEnv', appEnv)
+
 const Home: FC<NextPage> = () => {
   return (
     <>
@@ -20,7 +25,7 @@ const Home: FC<NextPage> = () => {
           <CardAnimation />
         </Card>
         <div style={{ position: "absolute", bottom: 20 }}>
-          <p>{version}-{process.env.NODE_ENV} ({process.env.APP_ENV})</p>
+          <p>{version}-{nodeEnv} ({appEnv})</p>
         </div>
       </Page>
     </>

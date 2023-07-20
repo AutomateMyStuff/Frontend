@@ -10,7 +10,7 @@
     "start": "next start",
     "start:prod": "cross-env NODE_ENV=production next start",
     "start:dev": "cross-env NODE_ENV=development next start",
-    "start:env": "if-env APP_ENV=UAT && npm run uat || if-env APP_ENV=SIT && npm run start:dev || if-env APP_ENV=LIVE && npm run start:prod || npm run start",
+    "start:env": "if-env NEXT_PUBLIC_APP_ENV=UAT && npm run uat || if-env NEXT_PUBLIC_APP_ENV=SIT && npm run start:dev || if-env NEXT_PUBLIC_APP_ENV=LIVE && npm run start:prod || npm run start",
     "dev": "cross-env NODE_ENV=development next dev",
     "uat": "concurrently \"npm run start\" \"npm run test:functional\" \"npm run uat:wait\"",
     "uat:nowait": "concurrently \"npm run start\" \"npm run test:functional\" \"npm run test:e2e\"",
