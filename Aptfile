@@ -54,6 +54,7 @@ libegl1
 libepoxy0
 libevdev2
 libffi7
+libgles-dev
 libgles2
 libglx0
 libgstreamer-gl1.0-0
@@ -83,3 +84,4 @@ libxslt1.1
 libx264-163
 libatomic1
 libevent-2.1-7
+libxt6
