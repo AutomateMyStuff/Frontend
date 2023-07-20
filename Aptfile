@@ -87,3 +87,5 @@ libxt6
 libice6
 libsm6
 libgles2-mesa-dev
+libgles2-mesa
+libsdl2-dev
