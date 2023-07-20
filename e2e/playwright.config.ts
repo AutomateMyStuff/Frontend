@@ -24,11 +24,16 @@ export default defineConfig({
   workers: 1,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html', {
-    open: 'always',
-    host: '0.0.0.0',
-    port: 3005,
-  }]],
+  reporter: [
+    [
+      "html",
+      {
+        open: "always",
+        host: "0.0.0.0",
+        port: 3005,
+      },
+    ],
+  ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -47,11 +52,15 @@ export default defineConfig({
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
     },
-
     {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      name: "chromium",
+      use: { ...devices["Pixel 5"] },
     },
+
+    // {
+    //   name: "firefox",
+    //   use: { ...devices["Desktop Firefox"] },
+    // },
 
     {
       name: "webkit",
