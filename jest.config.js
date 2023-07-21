@@ -7,14 +7,17 @@ const createJestConfig = nextJest({
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
-  "reporters": [
+  reporters: [
     "default",
+    "jest-junit",
     ["./node_modules/jest-html-reporter", {
       "pageTitle": "Test Report",
       "outputPath": "./test-results/test-report.html",
       "includeFailureMsg": true
     }]
   ],
+  collectCoverage: true,
+  coverageDirectory: "./test-results/coverage",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   testEnvironment: "jest-environment-jsdom",
   moduleDirectories: ["node_modules", "<rootDir>"],
