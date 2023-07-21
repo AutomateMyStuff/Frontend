@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/SignedIn renders SignIn 1`] = `
+exports[`Components/SignedIn renders SignedIn and match snapshot 1`] = `
 <div>
   <div
     class="signedin_container"

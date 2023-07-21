@@ -10,7 +10,9 @@ const customJestConfig = {
   "reporters": [
     "default",
     ["./node_modules/jest-html-reporter", {
-      "pageTitle": "Test Report"
+      "pageTitle": "Test Report",
+      "outputPath": "./test-results/test-report.html",
+      "includeFailureMsg": true
     }]
   ],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],

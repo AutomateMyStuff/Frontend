@@ -2,7 +2,7 @@ import { render, screen, waitFor } from '@testing-library/react'
 import { SignIn } from './index'
 
 describe('Components/SignIn', () => {
-    it('renders SignIn', () => {
+    it('renders SignIn and match snapshot', () => {
         const { container } = render(<SignIn />);
         expect(container).toMatchSnapshot();
     })

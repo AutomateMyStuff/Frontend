@@ -17,7 +17,7 @@ jest.mock("next-auth/react", () => {
 });
 
 describe('Components/SignedIn', () => {
-    it('renders SignIn', () => {
+    it('renders SignedIn and match snapshot', () => {
         const { container } = render(<SignedIn />);
         expect(container).toMatchSnapshot();
     })
