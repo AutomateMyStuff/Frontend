@@ -8,7 +8,7 @@ import { CardAnimation } from "src/components/CardAnimation"
 import { Page } from "src/components/Page"
 import getConfig from 'next/config';
 
-
+import {version} from 'package.json';
 const Home: FC<NextPage> = () => {
   return (
     <>
@@ -20,7 +20,7 @@ const Home: FC<NextPage> = () => {
           <CardAnimation />
         </Card>
         <div style={{ position: "absolute", bottom: 20 }}>
-          <p>{getConfig().publicRuntimeConfig['VERSION']}-{getConfig().publicRuntimeConfig['NODE_ENV']} ({getConfig().publicRuntimeConfig['APP_ENV']})</p>
+          <p>{version}-{getConfig().publicRuntimeConfig['NODE_ENV']} ({getConfig().publicRuntimeConfig['APP_ENV']})</p>
         </div>
       </Page>
     </>
