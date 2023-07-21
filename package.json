@@ -12,7 +12,7 @@
     "start:env": "if-env NEXT_PUBLIC_APP_ENV=UAT && npm run uat || if-env NEXT_PUBLIC_APP_ENV=SIT && npm run sit || if-env NEXT_PUBLIC_APP_ENV=LIVE && npm run start:prod || npm run start",
     "dev": "cross-env NODE_ENV=development next dev",
     "sit": "cross-env NODE_ENV=development npm i --include=dev && npm run dev",
-    "uat": "concurrently \"npm i --include=dev && npm run build && npm run start\" \"npm run test:functional\" \"npm run test:e2e-wait\"",
+    "uat": "concurrently \"npm run start\" \"npm run test:functional\" \"npm run test:e2e-wait\"",
     "uat:nowait": "concurrently \"npm run start\" \"npm run test:functional\" \"npm run test:e2e\"",
     "--------build-commands--------": "",
     "build": "cd e2e && npm i && cd .. && next build",
