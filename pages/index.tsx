@@ -1,4 +1,4 @@
-import { FC } from "react"
+import { FC, useState, useEffect } from "react"
 import Head from "next/head"
 
 import type { NextPage } from "next/types"
@@ -9,6 +9,7 @@ import { Page } from "src/components/Page"
 import getConfig from 'next/config';
 
 import {version} from 'package.json';
+
 const Home: FC<NextPage> = () => {
   return (
     <>

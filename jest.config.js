@@ -12,8 +12,11 @@ const customJestConfig = {
   moduleDirectories: ["node_modules", "<rootDir>"],
   roots: ["<rootDir>"],
   modulePaths: ["<rootDir>"],
-  moduleDirectories: ["node_modules"],
   setupFiles: ["jest-canvas-mock"],
+  coveragePathIgnorePatterns: ['.*__snapshots__/.*'],
+  testMatch: [
+    "<rootDir>/src/**/*.test.{js,jsx,ts,tsx}"
+  ]
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

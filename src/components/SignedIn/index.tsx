@@ -14,6 +14,7 @@ export const SignedIn: FC = () => {
     <div className={ styles.signedin_container }>
       <div className={ styles.signedin_content }>
         <BsFillCheckCircleFill/>
+        <h1>Signed In</h1>
         <p>
           You&apos;re signed in
           <br/>
