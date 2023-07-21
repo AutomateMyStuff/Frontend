@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   publicRuntimeConfig: {
     NODE_ENV: process.env.NODE_ENV,
-    APP_ENV: process.env.APP_ENV,
+    APP_ENV: process.env.NEXT_PUBLIC_APP_ENV,
   },
   async rewrites() {
     return {
