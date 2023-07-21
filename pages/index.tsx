@@ -7,12 +7,7 @@ import { Card } from "src/components/Card"
 import { CardAnimation } from "src/components/CardAnimation"
 import { Page } from "src/components/Page"
 
-import { version } from '../package.json';
-
-const nodeEnv = process.env.NODE_ENV;
-const appEnv = process.env.NEXT_PUBLIC_APP_ENV;
-
-console.log('appEnv', appEnv)
+import { env } from "src/utils/env"
 
 const Home: FC<NextPage> = () => {
   return (
@@ -25,7 +20,7 @@ const Home: FC<NextPage> = () => {
           <CardAnimation />
         </Card>
         <div style={{ position: "absolute", bottom: 20 }}>
-          <p>{version}-{nodeEnv} ({appEnv})</p>
+          <p>{env.VERSION}-{env.NODE_ENV} ({env.NEXT_PUBLIC_APP_ENV})</p>
         </div>
       </Page>
     </>
