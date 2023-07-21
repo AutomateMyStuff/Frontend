@@ -9,7 +9,10 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   reporters: [
     "default",
-    "jest-junit",
+    ['jest-junit', {
+      outputDirectory: "test-results",
+      outputName: "junit.xml",
+    }],
     ["./node_modules/jest-html-reporter", {
       "pageTitle": "Test Report",
       "outputPath": "./test-results/test-report.html",

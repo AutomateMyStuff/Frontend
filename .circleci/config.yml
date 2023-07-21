@@ -24,12 +24,12 @@ jobs:
       # Copy output to artifacts dir
       - run:
           name: Copy artifacts
-          command: cp -R test-results ~/artifacts 2>/dev/null || true
+          command: cp -R test-results ./junit.xml ~/artifacts 2>/dev/null || true
       - store_artifacts:
           path: ~/artifacts
-          destination: test-results
+          destination: reports
       - store_test_results:
-          path: ./test-results/
+          path: ./test-results/junit.xml
   build-node:
     # Build node project
     executor: node/default
