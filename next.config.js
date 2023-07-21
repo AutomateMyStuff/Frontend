@@ -1,6 +1,13 @@
+import {version} from 'package.json';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  publicRuntimeConfig: {
+    VERSION: version,
+    NODE_ENV: process.env.NODE_ENV,
+    APP_ENV: process.env.APP_ENV,
+  },
   async rewrites() {
     return {
       beforeFiles: [

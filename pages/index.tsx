@@ -6,8 +6,8 @@ import type { NextPage } from "next/types"
 import { Card } from "src/components/Card"
 import { CardAnimation } from "src/components/CardAnimation"
 import { Page } from "src/components/Page"
+import getConfig from 'next/config';
 
-import { env } from "src/utils/env"
 
 const Home: FC<NextPage> = () => {
   return (
@@ -20,7 +20,7 @@ const Home: FC<NextPage> = () => {
           <CardAnimation />
         </Card>
         <div style={{ position: "absolute", bottom: 20 }}>
-          <p>{env.VERSION}-{env.NODE_ENV} ({env.NEXT_PUBLIC_APP_ENV})</p>
+          <p>{getConfig().publicRuntimeConfig['VERSION']}-{getConfig().publicRuntimeConfig['NODE_ENV']} ({getConfig().publicRuntimeConfig['APP_ENV']})</p>
         </div>
       </Page>
     </>
