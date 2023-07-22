@@ -1,6 +1,7 @@
 import { sleep } from 'k6';
 import http from 'k6/http';
 import { textSummary } from 'https://jslib.k6.io/k6-summary/0.0.1/index.js';
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 export const options = {
   duration: '.5m',
@@ -21,6 +22,7 @@ export function handleSummary(data) {
   console.log('Finished executing performance tests');
 
   return {
+    "summary.html": htmlReport(data),
     'stdout': textSummary(data, { indent: ' ', enableColors: true }), // Show the text summary to stdout...
     'summary.json': JSON.stringify(data), // and a JSON with all the details...
   };
