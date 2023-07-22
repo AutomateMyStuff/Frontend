@@ -68,6 +68,7 @@ workflows:
             - test-node
   load_test:
     jobs:
+      # grafana/k6 orb is used to run load tests
       - grafana/k6:
           script: loadtests/performance-test.js --out json=full.json > /tmp/artifacts
           requires:
