@@ -72,7 +72,7 @@ workflows:
       - grafana/k6:
           script: loadtests/performance-test.js --out json=full.json > /tmp/artifacts
           requires:
-            - build-and-test
+            - test-node
     # - deploy:
     #     requires:
     #       - build-node
