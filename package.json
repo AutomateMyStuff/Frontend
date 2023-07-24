@@ -21,7 +21,7 @@
     "test": "npm run lint && jest",
     "test:watch": "jest --watch",
     "test:functional": "cucumber-js --publish",
-    "test:performance": "cross-env-shell 'lighthouse --chrome-flags='--headless' $UAT_URL' --output html --output-path ./public/lighthouse-report.html",
+    "test:performance": "cross-env-shell \"lighthouse $UAT_URL --output html --output-path ./public/lighthouse-report.html\" --chrome-flags='--headless' ",
     "test:e2e": "npm run test:e2e-test && npm run test:e2e-report",
     "test:e2e-test": "cd e2e && npx playwright install && npm run test",
     "test:e2e-report": "cd e2e && npm run report",
