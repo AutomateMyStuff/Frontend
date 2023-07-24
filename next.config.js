@@ -9,6 +9,10 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
+          source: "/perf",
+          destination: "/lighthouse-report.html",
+        },
+        {
           source: "/e2e/:path*",
           destination: "http://localhost:3005/:path*",
         },
