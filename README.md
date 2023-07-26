@@ -11,6 +11,7 @@
 3. Lighthouse Performance test: https://automate-my-stuff-frontend-uat-26e2dbaf4cf8.herokuapp.com/perf
 4. K6 Load Testing: https://app.circleci.com/pipelines/github/AutomateMyStuff/Frontend/31/workflows/7f2aa706-423f-41f7-99b1-646a2361d104/jobs/73/artifacts (See summary.html)
 5. Jest Unit Testing: https://app.circleci.com/pipelines/github/AutomateMyStuff/Frontend/31/workflows/7f2aa706-423f-41f7-99b1-646a2361d104/jobs/71/artifacts (See test-report.html)
+6. All automations running on a PR: https://github.com/AutomateMyStuff/Frontend/pull/15
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/38794059/216788052-987e13ed-45d6-4aa0-ae45-2d129b587f51.gif" width="600" />
