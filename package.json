@@ -33,7 +33,7 @@
     "bump:major": "npm version major --force"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^9.3.0",
+    "@cucumber/cucumber": "^10.0.0",
     "@next/font": "13.1.1",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
